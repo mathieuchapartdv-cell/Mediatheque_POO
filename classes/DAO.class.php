@@ -65,13 +65,13 @@ abstract class DAO
 
         $affectations = [];
         foreach (array_keys($donnees) as $col) {
-            $affectations[] = "$col = :$col";
+            $affectations[] = "`$col` = :$col";
         }
 
         $stmt = $this->pdo->prepare(
             "UPDATE {$this->table} SET"
             . implode(",", $affectations)
-            . "WHERE id = :id"
+            . " WHERE id = :id"
         );
 
         $params = [":id" => $id];

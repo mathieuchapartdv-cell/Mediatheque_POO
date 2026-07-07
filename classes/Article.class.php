@@ -1,8 +1,6 @@
 <?php
 namespace Mediatheque;
 
-use Override;
-
 // ================================================================
 //  CLASSE Article
 //  Modele commun a Livre et Dvd.
@@ -111,7 +109,6 @@ class ArticleDAO extends DAO {
         $article->setId((int) $row["id"]);
         return $article;
     }
-    #[Override]
     protected function dehydrate(object $entite): array
     {
         return [

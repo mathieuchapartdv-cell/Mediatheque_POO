@@ -2,10 +2,6 @@
 
 namespace Mediatheque;
 
-use Override;
-
-namespace Mediatheque;
-
 class Dvd extends Article implements Empruntable
 {
     // Polymorphisme par heritage :
