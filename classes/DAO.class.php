@@ -69,9 +69,9 @@ abstract class DAO
         }
 
         $stmt = $this->pdo->prepare(
-            "UPDATE {$this->table} SET"
+            "UPDATE {$this->table} SET "
             . implode(",", $affectations)
-            . "WHERE id = :id"
+            . " WHERE id = :id"
         );
 
         $params = [":id" => $id];
