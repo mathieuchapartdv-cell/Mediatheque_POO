@@ -65,7 +65,7 @@ abstract class DAO
 
         $affectations = [];
         foreach (array_keys($donnees) as $col) {
-            $affectations[] = "$col = :$col";
+            $affectations[] = "`$col` = :$col";
         }
 
         $stmt = $this->pdo->prepare(
